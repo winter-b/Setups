@@ -21,8 +21,10 @@ Listen 8080
 
 DocumentRoot "C:/servakas" # root of the served webpage, specified permmisions here will apply to all child directories
 <Directory "C:/servakas">
-	Options Indexes FollowSymLinks # allow indexing of directories
-	Require all granted # allow everyone
+	# allow indexing of directories
+	Options Indexes FollowSymLinks 
+	# allow everyone
+	Require all granted 
 </Directory>
 ```
 
@@ -32,11 +34,13 @@ DocumentRoot "C:/servakas" # root of the served webpage, specified permmisions h
 ### 5.go to httpd-vhosts.conf file in 'C:\xampp\apache\conf\extra\' and add these lines at the bottom to bind what port serves what directory:
 ```
 <VirtualHost localhost:1008> #domain by which it is called through browser
-    DocumentRoot "C:/btc" # root of direcotry
+    # root of direcotry
+    DocumentRoot "C:/btc" 
     ServerName localhost
-	<Directory "C:/btc"> # directory
-		Require all granted # allow everyone
-    </Directory>
+	<Directory "C:/btc"> 
+		# allow everyone
+		Require all granted 
+    	</Directory>
 </VirtualHost>
 
 <VirtualHost 192.168.8.106:8080>
@@ -44,7 +48,8 @@ DocumentRoot "C:/servakas" # root of the served webpage, specified permmisions h
     ServerName 192.168.8.106
 	<Directory "C:/vaporwawe">
 		AllowOverride All
-		<Files ".tra"> # block access to view contents of file ".tra"
+		# block access to view contents of file ".tra"
+		<Files ".tra">
 			Require all denied
 		</Files>
     </Directory>
@@ -52,10 +57,14 @@ DocumentRoot "C:/servakas" # root of the served webpage, specified permmisions h
 ```
 ### 6.Add index.html files to these directories in the 'C:/vaporwawe direcotry' create '.tra' (leave it empty) and '.htaccess' file and add these lines:
 ```
-AuthType Basic  # authentication type
-AuthName "Čia apipėlšimas, įrašykite savo admin prisijungimo duomenis žemiau:" #prompt for user
-AuthBasicProvider file # type of credential storage
-AuthUserFile "C:/passwords/.htpasswd" # credential location
+# authentication type
+AuthType Basic  
+#prompt for user
+AuthName "Čia apipėlšimas, įrašykite savo admin prisijungimo duomenis žemiau:" 
+# type of credential storage
+AuthBasicProvider file 
+# credential location
+AuthUserFile "C:/passwords/.htpasswd" 
 Require valid-user # authenticate only valid users
 ```
 
