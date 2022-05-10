@@ -4,7 +4,7 @@
 
 The end result will be 3 ports open which will serve websites, each one in a diffrent way
 
-### 1.Download the XAMMP .msi executable from : 
+### 1.Download the XAMPP .msi executable from : 
 
 https://www.apachefriends.org/download.html
 
@@ -12,7 +12,7 @@ For this tutorial i am using  8.0.18 version
 
 ### 2.Run the .msi file and click next on all to use the default configuration
 
-### 3.after installation run the XAMMP program. In XAMMP click on config in "Apache" row and select "Apache(htttpd.conf)" or go to C:\xampp\apache\conf\htttpd.conf add the following lines:
+### 3.after installation run the XAMPP program. In XAMPP click on config in "Apache" row and select "Apache(htttpd.conf)" or go to C:\xampp\apache\conf\htttpd.conf add the following lines:
 ```
 #Opens ports to listen to
 Listen 90
@@ -64,7 +64,7 @@ Require valid-user # authenticate only valid users
 htpasswd.exe -c -b -B -C 15 C:\passwords\.htpasswd adminas adminas123
 ```
 
-### 8.After the configuration is done go to XAMMP application and click in "Apache" row "Start"
+### 8.After the configuration is done go to XAMPP application and click in "Apache" row "Start"
 
 ### 9.Explore and test the websites at:
 
