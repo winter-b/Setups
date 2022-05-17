@@ -41,3 +41,6 @@
 ![image](https://user-images.githubusercontent.com/85021800/168693343-de0af877-27ec-4e3b-8281-678dbf665963.png)
 ### Apply to all spaces
 ![image](https://user-images.githubusercontent.com/85021800/168693361-fa88e0fa-fd4f-4ccc-92ab-b333c78fcd7b.png)
+
+## View activiy logs
+### Use windows integrated event viewer or download more advanced Process monitor from Sysinternals [link to download](https://docs.microsoft.com/en-us/sysinternals/downloads/procmon)
