@@ -2,8 +2,7 @@
 
 # Tested in Windows 11
 
-## Domain blocking
-### It is possible to do domain blocking in Windows firewall, we'll block it using hosts file.
+## Domain blocking using hosts file
 ### First find the directory in which windows hosts file is kept. Open 'ragedit.exe' under 'C:\Windows'
 ### In ragedit go to 'HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters' and the hey is 'DataBasePath' 
 ![image](https://user-images.githubusercontent.com/85021800/168692089-31185645-5bd2-4530-9f61-805f88177b31.png)
@@ -11,6 +10,25 @@
 
 ### Open hosts file and add the following line to redirect domain to localhost
 ![image](https://user-images.githubusercontent.com/85021800/168692900-231da624-36b6-4273-88d6-22426c10fc9c.png)
+## Ip/ip range blocking using firewall
+### Open Windows Defender Firewall with Advanced Security and create a new 'Outbound rule'
+### Select Custom
+![image](https://user-images.githubusercontent.com/85021800/168787894-4a3c18ec-276d-49df-a7a0-c095be841051.png)
+### Select all programs
+![image](https://user-images.githubusercontent.com/85021800/168787951-61042b71-700d-4d24-86a0-b001299a2eac.png)
+### Select any protocol type
+![image](https://user-images.githubusercontent.com/85021800/168788088-37190e26-30ec-40bb-9758-81882722d8d3.png)
+### Add ip range or ip under remote ip address
+![image](https://user-images.githubusercontent.com/85021800/168789365-acc83235-0c57-4714-a85d-742d6d19da6f.png)
+### Block connection
+![image](https://user-images.githubusercontent.com/85021800/168789488-11787a48-7c4c-4a3c-8bfd-9cda57540e36.png)
+### All spaces
+![image](https://user-images.githubusercontent.com/85021800/168789560-5ff8da19-4fac-4df4-8d85-34c3346ce66b.png)
+### Give name
+![image](https://user-images.githubusercontent.com/85021800/168789740-dc84a471-8ac9-4559-9501-0c2f9499e9e8.png)
+
+### Test
+![image](https://user-images.githubusercontent.com/85021800/168786602-ba4353bd-2f56-4efe-a696-0cf4dc78af29.png)
 
 ## Port blocking
 
